@@ -4,6 +4,7 @@ App básico acessando o banco de dados No-SQL Cassandra com .Net Core 3.1
 
 Requisitos:
 Instalar o CassandraCSharpDriver no seu Visual Studio ou Vs Code:
+
 PM> Install-Package CassandraCSharpDriver
 
 Instalar o Docker Desktop:
