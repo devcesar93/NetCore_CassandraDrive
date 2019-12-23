@@ -1,0 +1,27 @@
+@model ApplicationTest.Models.Cliente
+
+    @Html.AntiForgeryToken()
+    @using( Html.BeginForm("Edit", "Cliente", FormMethod.Post)) {
+        <table border="0" style="width:100%" >
+            <td><input hidden="Id"  /></td>
+            <tr>
+                <td>Nome:</td>
+                <td><input asp-for="Nome" style="width:270px" /></td>
+            </tr>
+             <tr>
+                <td>Email:</td>
+                <td><input asp-for="Email" style="width:270px"/></td>
+            </tr>
+            <tr>
+                <td>CPF:</td>
+                <td><input asp-for="CPF" /></td>
+            </tr>
+            <tr>
+                <td>Data Nascimento:</td>
+                <td><input asp-for="DataNascimento" /></td>
+            </tr>
+        </table>
+         <input type="submit" class="btn btn-primary" />
+         @Html.ActionLink("Início", "ListarClientes", "Cliente", null, new { @class = "btn btn-primary"})
+    }
+       

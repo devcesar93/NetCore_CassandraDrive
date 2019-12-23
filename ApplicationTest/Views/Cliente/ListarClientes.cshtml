@@ -1,0 +1,24 @@
+@model IEnumerable<ApplicationTest.Models.Cliente>
+
+<table border="1" style="width:100%" >
+    <tr>
+        <th style="display:none;" >Código</th>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>Email</th>
+        <th>CPF</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="display:none;">@Html.DisplayFor(modelItem => item.Id) </td>
+            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+            <td>@Html.DisplayFor(modelItem => item.DataNascimento)</td>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+            <td>@Html.ActionLink("Editar", "Edit", "Cliente", new { @id = item.Id}) </td>
+            <td>@Html.ActionLink("Excluir", "Delete", "Cliente", new { @id = item.Id}) </td>
+        </tr>
+    }
+</table><br>
+@Html.ActionLink("Novo", "Add", "Cliente", null, new { @class = "btn btn-primary"})
