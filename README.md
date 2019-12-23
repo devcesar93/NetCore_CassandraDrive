@@ -10,7 +10,9 @@ PM> Install-Package CassandraCSharpDriver
 Instalar o Docker Desktop:
 https://hub.docker.com/editions/community/docker-ce-desktop-windows
 
-1 - No prompt de comando, utilize o comando  docker-compose build  para compilar o projeto
+1 - Baixe a imagem do cassandra utilizando o docker:  https://hub.docker.com/_/cassandra
 
-2 - Utilize o comando docker-compose up -d para subir os containers da Aplicação e do Cassandra
+2 - No prompt de comando, utilize o comando  docker-compose build  para compilar o projeto
+
+3 - Utilize o comando docker-compose up -d para subir os containers da Aplicação e do Cassandra
 
